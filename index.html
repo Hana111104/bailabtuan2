@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tìm hiểu tổng quan về Cloud Computing (IaaS, PaaS, SaaS), công nghệ CDN và cách triển khai website an toàn với Cloudflare Pages.">
+    <meta name="keywords" content="Cloud Computing, CDN, Cloudflare Pages, IaaS, PaaS, SaaS, Bảo mật Web, Lab 2">
+    <meta name="author" content="Nguyễn Tuấn Anh, Nguyễn Kim Hân, Võ Hoàng Tấn Phát">
+    <meta property="og:title" content="Tổng quan về Cloud Computing và CDN - Nhóm Bài Tập">
+    <meta property="og:description" content="Khám phá các mô hình dịch vụ đám mây và giải pháp phân phối nội dung hiện đại.">
+    <meta property="og:image" content="na1.jpg"> <meta property="og:url" content="https://your-domain.com">
+    <meta property="og:type" content="website">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <title>Cloud Computing & CDN - Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="#" style="font-weight: 800; color: var(--neon-pink);">CLOUD.LAB</a>
+            <div class="nav-links">
+                <a href="#cloud">Cloud Computing</a>
+                <a href="#models">Mô hình</a>
+                <a href="#cloudflare">Cloudflare</a>
+                <a href="#cdn">CDN & Security</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1 class="shining-text">Cloud Computing & CDN</h1>
+            <p style="margin-top: 1rem; opacity: 0.7;">Tổng quan kiến thức và giải pháp hạ tầng hiện đại</p>
+        </header>
+
+        <div class="team-container">
+            <div class="member-badge"><span class="member-name">Nguyễn Tuấn Anh</span> 22004335</div>
+            <div class="member-badge"><span class="member-name">Nguyễn Kim Hân</span> 22004153</div>
+            <div class="member-badge"><span class="member-name">Võ Hoàng Tấn Phát</span> 22004290</div>
+        </div>
+
+        <section id="cloud" class="section-grid">
+            <div class="text-side">
+                <h2>Cloud Computing là gì?</h2>
+                <div class="glass-card">
+                    <p>Điện toán đám mây là mô hình cung cấp tài nguyên CNTT (máy chủ, lưu trữ, cơ sở dữ liệu) qua Internet. Thay vì sở hữu phần cứng vật lý, bạn thuê tài nguyên theo nhu cầu, giúp tối ưu chi phí và khả năng mở rộng không giới hạn.</p>
+                </div>
+            </div>
+            <div class="image-side">
+                <img src="na1.jpg" alt="Cloud" class="content-image">
+            </div>
+        </section>
+
+        <section id="models" class="models-container">
+            <h2 style="text-align: center;">Mô Hình Dịch Vụ</h2>
+            <div class="models-grid">
+                <div class="glass-card model-card iaas">
+                    <h3>IaaS</h3>
+                    <p>Hạ tầng cơ bản. Bạn thuê máy chủ trống và tự cài đặt mọi thứ từ Hệ điều hành đến Ứng dụng.</p>
+                </div>
+                <div class="glass-card model-card paas">
+                    <h3>PaaS</h3>
+                    <p>Nền tảng sẵn có. Bạn chỉ cần đẩy code ứng dụng lên, Cloud lo phần máy chủ và vận hành.</p>
+                </div>
+                <div class="glass-card model-card saas">
+                    <h3>SaaS</h3>
+                    <p>Phần mềm hoàn chỉnh. Bạn chỉ việc đăng nhập và sử dụng (như Gmail, Google Drive).</p>
+                </div>
+            </div>
+            <div class="takeaway-bar">
+                → Càng tiến về SaaS, trách nhiệm quản lý của người dùng càng giảm bớt.
+            </div>
+        </section>
+
+        <section id="cloudflare" class="section-grid reverse">
+            <div class="image-side">
+                <img src="na2.png" alt="Cloudflare" class="content-image" style="border-color: var(--neon-gold);">
+            </div>
+            <div class="text-side">
+                <h2>Cloudflare Pages</h2>
+                <div class="glass-card">
+                    <p>Là nền tảng <strong>PaaS</strong> hàng đầu để triển khai website tĩnh. Với khả năng kết nối trực tiếp GitHub, tự động Build & Deploy, website của bạn sẽ được bảo mật tuyệt đối và tốc độ cực nhanh nhờ hạ tầng Cloudflare.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cdn" class="section-grid">
+            <div class="text-side">
+                <h2>Mạng phân phối nội dung (CDN)</h2>
+                <div class="glass-card">
+                    <p>CDN phân tán dữ liệu website ra hàng trăm máy chủ trên thế giới. Người dùng ở đâu sẽ truy cập vào máy chủ gần đó nhất.</p>
+                    <ul style="margin-top: 1.5rem;">
+                        <li><strong>Tốc độ:</strong> Giảm độ trễ xuống mức tối thiểu.</li>
+                        <li><strong>Bảo mật:</strong> Chống DDoS và ẩn IP gốc của máy chủ.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image-side">
+                <img src="na3.png" alt="Security" class="content-image" style="border-color: var(--neon-pink);">
+            </div>
+        </section>
+
+        <section id="security" style="margin-bottom: 5rem;">
+            <div class="glass-card" style="border-color: var(--neon-pink);">
+                <h2 style="color: var(--neon-pink);">Rủi ro & Giải pháp</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div>
+                        <p style="opacity: 0.8; margin-bottom: 1rem;">Mặc dù rất mạnh mẽ, hệ thống Cloud vẫn đối mặt với các nguy cơ lộ IP gốc hoặc lỗi cấu hình cache.</p>
+                    </div>
+                    <div>
+                        <ul class="risks-solutions">
+                            <li>Bật WAF (Tường lửa ứng dụng web).</li>
+                            <li>Sử dụng chứng chỉ SSL/HTTPS.</li>
+                            <li>Giám sát lưu lượng truy cập 24/7.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2025 Cloud Computing Group Project - Designed for Lab 1 & 2
+        </footer>
+    </div>
+
+</body>
+</html>
+
+
+
+
