@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tìm hiểu tổng quan về Cloud Computing (IaaS, PaaS, SaaS), công nghệ CDN và cách triển khai website an toàn với Cloudflare Pages.">
-    <meta name="keywords" content="Cloud Computing, CDN, Cloudflare Pages, IaaS, PaaS, SaaS, Bảo mật Web, Lab 2">
+    <meta name="description" content="Tìm hiểu tổng quan về Cloud Computing, OWASP Top 10 và cách triển khai website an toàn với Cloudflare.">
+    <meta name="keywords" content="Cloud Computing, OWASP, SQL Injection, XSS, Cloudflare, Bảo mật Web">
     <meta name="author" content="Nguyễn Tuấn Anh, Nguyễn Kim Hân, Võ Hoàng Tấn Phát">
     
-    <meta property="og:title" content="Tổng quan về Cloud Computing và CDN - Nhóm Bài Tập">
-    <meta property="og:description" content="Khám phá các mô hình dịch vụ đám mây và giải pháp phân phối nội dung hiện đại.">
+    <meta property="og:title" content="Tổng quan về Cloud Computing & Bảo mật Ứng dụng - Nhóm Bài Tập">
+    <meta property="og:description" content="Khám phá các mô hình đám mây, lỗ hổng OWASP và giải pháp bảo mật hiện đại.">
     <meta property="og:image" content="na1.jpg">
     <meta property="og:type" content="website">
 
@@ -16,7 +16,7 @@
     
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://fonts.googleapis.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; form-action 'self';">
     
-    <title>Cloud Computing & CDN - Overview</title>
+    <title>Cloud Computing & Security Overview</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -28,17 +28,17 @@
             <a href="#" class="nav-brand">CLOUD.LAB</a>
             <div class="nav-links">
                 <a href="#cloud">Cloud Computing</a>
-                <a href="#models">Mô hình</a>
-                <a href="#cloudflare">Cloudflare</a>
-                <a href="#cdn">CDN & Security</a>
+                <a href="#owasp">OWASP Top 10</a>
+                <a href="#vulnerabilities">Lỗ hổng phổ biến</a>
+                <a href="#security">Bảo mật Cloud</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
         <header>
-            <h1 class="shining-text">Cloud Computing & CDN</h1>
-            <p class="header-subtitle">Tổng quan kiến thức và giải pháp hạ tầng hiện đại</p>
+            <h1 class="shining-text">Cloud Computing & Web Security</h1>
+            <p class="header-subtitle">Kiến thức nền tảng và các giải pháp bảo mật ứng dụng hiện đại</p>
         </header>
 
         <div class="team-container">
@@ -49,87 +49,58 @@
 
         <section id="cloud" class="section-grid">
             <div class="text-side">
-                <h2>Cloud Computing là gì?</h2>
+                <h2>Giao thức & Đám mây</h2>
                 <div class="glass-card">
-                    <p>Điện toán đám mây là mô hình cung cấp tài nguyên CNTT (máy chủ, lưu trữ, cơ sở dữ liệu) qua Internet. Thay vì sở hữu phần cứng vật lý, bạn thuê tài nguyên theo nhu cầu, giúp tối ưu chi phí và khả năng mở rộng không giới hạn.</p>
+                    <p><strong>HTTPS & TLS:</strong> Là tiêu chuẩn bảo mật thiết yếu. HTTPS sử dụng giao thức TLS để mã hóa đường truyền, đảm bảo tính riêng tư và toàn vẹn dữ liệu giữa trình duyệt và máy chủ.</p>
+                    <p class="mt-1"><strong>Cloud Computing:</strong> Cung cấp tài nguyên CNTT qua Internet. Với các mô hình như IaaS, PaaS, SaaS, doanh nghiệp có thể tối ưu chi phí và mở rộng hạ tầng linh hoạt.</p>
                 </div>
             </div>
             <div class="image-side">
-                <img src="na1.jpg" alt="Cloud" class="content-image">
+                <img src="na1.jpg" alt="Cloud and Security" class="content-image">
             </div>
         </section>
 
-        <section id="models" class="models-container">
-            <h2 class="text-center">Mô Hình Dịch Vụ</h2>
+        <section id="owasp" class="models-container">
+            <h2 class="text-center">OWASP & Juice Shop</h2>
             <div class="models-grid">
                 <div class="glass-card model-card iaas">
-                    <h3>IaaS</h3>
-                    <p>Hạ tầng cơ bản. Bạn thuê máy chủ trống và tự cài đặt mọi thứ từ Hệ điều hành đến Ứng dụng.</p>
+                    <h3>OWASP Top 10</h3>
+                    <p>Danh sách 10 rủi ro bảo mật ứng dụng web nguy hiểm nhất toàn cầu, giúp nhà phát triển nhận diện và phòng chống các mối đe dọa.</p>
                 </div>
                 <div class="glass-card model-card paas">
-                    <h3>PaaS</h3>
-                    <p>Nền tảng sẵn có. Bạn chỉ cần đẩy code ứng dụng lên, Cloud lo phần máy chủ và vận hành.</p>
+                    <h3>Juice Shop</h3>
+                    <p>Ứng dụng giả lập của OWASP chứa các lỗ hổng thực tế, dùng để đào tạo Pentest và lập trình an toàn.</p>
                 </div>
                 <div class="glass-card model-card saas">
-                    <h3>SaaS</h3>
-                    <p>Phần mềm hoàn chỉnh. Bạn chỉ việc đăng nhập và sử dụng (như Gmail, Google Drive).</p>
-                </div>
-            </div>
-            <div class="takeaway-bar">
-                → Càng tiến về SaaS, trách nhiệm quản lý của người dùng càng giảm bớt.
-            </div>
-        </section>
-
-        <section id="cloudflare" class="section-grid reverse">
-            <div class="image-side">
-                <img src="na2.png" alt="Cloudflare" class="content-image border-gold">
-            </div>
-            <div class="text-side">
-                <h2>Cloudflare Pages</h2>
-                <div class="glass-card">
-                    <p>Là nền tảng <strong>PaaS</strong> hàng đầu để triển khai website tĩnh. Với khả năng kết nối trực tiếp GitHub, tự động Build & Deploy, website của bạn sẽ được bảo mật tuyệt đối và tốc độ cực nhanh nhờ hạ tầng Cloudflare.</p>
+                    <h3>Broken Access Control</h3>
+                    <p>Rủi ro hàng đầu trong OWASP 2021, xảy ra khi hệ thống không kiểm soát chặt chẽ quyền truy cập của người dùng.</p>
                 </div>
             </div>
         </section>
 
-        <section id="cdn" class="section-grid">
-            <div class="text-side">
-                <h2>Mạng phân phối nội dung (CDN)</h2>
-                <div class="glass-card">
-                    <p>CDN phân tán dữ liệu website ra hàng trăm máy chủ trên thế giới. Người dùng ở đâu sẽ truy cập vào máy chủ gần đó nhất.</p>
-                    <ul class="mt-1-5">
-                        <li><strong>Tốc độ:</strong> Giảm độ trễ xuống mức tối thiểu.</li>
-                        <li><strong>Bảo mật:</strong> Chống DDoS và ẩn IP gốc của máy chủ.</li>
-                    </ul>
-                </div>
-            </div>
+        <section id="vulnerabilities" class="section-grid reverse">
             <div class="image-side">
-                <img src="na3.png" alt="Security" class="content-image border-pink">
+                <img src="na2.png" alt="Vulnerabilities" class="content-image border-gold">
+            </div>
+            <div class="text-side">
+                <h2>Lỗ hổng phổ biến</h2>
+                <div class="glass-card">
+                    <p><strong>SQL Injection:</strong> Chèn mã độc vào truy vấn dữ liệu. <em>Khắc phục:</em> Sử dụng Parameterized Queries.</p>
+                    <p><strong>XSS (Cross-Site Scripting):</strong> Chèn script độc hại vào trình duyệt người dùng. <em>Khắc phục:</em> Mã hóa dữ liệu đầu ra (Encoding).</p>
+                    <p><strong>Security Misconfiguration:</strong> Lỗi cấu hình làm lộ thông tin nhạy cảm. <em>Khắc phục:</em> Vô hiệu hóa duyệt thư mục và chặn truy cập tệp cấu hình.</p>
+                </div>
             </div>
         </section>
 
         <section id="security" class="mb-5">
             <div class="glass-card border-pink">
-                <h2 class="text-pink">Rủi ro & Giải pháp</h2>
+                <h2 class="text-pink">Bảo vệ hạ tầng Cloud</h2>
                 <div class="risk-grid">
                     <div>
-                        <p class="risk-desc">Mặc dù rất mạnh mẽ, hệ thống Cloud vẫn đối mặt với các nguy cơ lộ IP gốc hoặc lỗi cấu hình cache.</p>
+                        <p class="risk-desc">Môi trường Cloud có bề mặt tấn công rộng. Việc cấu hình sai có thể dẫn đến rò rỉ dữ liệu lớn hoặc tấn công tiêu hao chi phí (Denial of Wallet).</p>
                     </div>
                     <div>
                         <ul class="risks-solutions">
-                            <li>Bật WAF (Tường lửa ứng dụng web).</li>
-                            <li>Sử dụng chứng chỉ SSL/HTTPS.</li>
-                            <li>Giám sát lưu lượng truy cập 24/7.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            &copy; 2025 Cloud Computing Group Project - Designed for Lab 1 & 2
-        </footer>
-    </div>
-
-</body>
-</html>
+                            <li><strong>Cloud IAM:</strong> Áp dụng quyền hạn tối thiểu (Least Privilege).</li>
+                            <li><strong>Cloud WAF:</strong> Chặn các hành vi duyệt tìm đường dẫn bất thường.</li>
+                            <li><strong>VPC
