@@ -32,6 +32,7 @@
                 <a href="#cloudflare">Cloudflare</a>
                 <a href="#cdn">CDN & Security</a>
                 <a href="#web-security">Bảo mật nâng cao</a>
+                <a href="#lab4">Lab 4: Giám sát</a>
             </div>
         </div>
     </nav>
@@ -168,8 +169,71 @@
             </div>
         </section>
 
+        <section id="lab4" class="mb-5">
+            <h2 class="shining-text">LAB TUẦN 4 – GIÁM SÁT, NHẬT KÝ VÀ PHÁT HIỆN BẤT THƯỜNG</h2>
+            
+            <div class="section-grid">
+                <div class="text-side">
+                    <h3>1. Kiến thức nền tảng</h3>
+                    <div class="glass-card">
+                        <p><strong>Monitoring (Giám sát):</strong> Quy trình liên tục thu thập chỉ số định lượng (metrics) như CPU, RAM, băng thông để phản ánh sức khỏe hệ thống theo thời gian thực.</p>
+                        <p class="mt-1"><strong>Logging (Nhật ký):</strong> Lưu trữ luồng sự kiện (event streams) và dữ liệu định tính. Là "hộp đen" phục vụ điều tra nguyên nhân gốc rễ (Root Cause Analysis).</p>
+                        <p class="mt-1"><strong>Security Visibility:</strong> Khả năng loại bỏ "điểm mù" kỹ thuật, nắm bắt tường tận kiến trúc an ninh từ lớp ảo hóa đến ứng dụng.</p>
+                    </div>
+                </div>
+                <div class="text-side">
+                    <h3>2. Đối tượng & Rủi ro</h3>
+                    <div class="glass-card border-gold">
+                        <ul class="risks-solutions">
+                            <li><strong>Người dùng & Session:</strong> Giám sát để tránh quá tải và tấn công Session Hijacking.</li>
+                            <li><strong>Đăng nhập:</strong> Kiểm soát an ninh, chống Brute-force.</li>
+                            <li><strong>Yêu cầu bất thường:</strong> Phát hiện sớm SQL Injection, DDoS.</li>
+                            <li><strong>Lỗi hệ thống:</strong> Đảm bảo trải nghiệm người dùng, tránh Cascading failure.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card mt-1-5">
+                <h3>3. Phân tích hành vi bất thường</h3>
+                <p>Trong các tình huống thực tế, việc kết hợp Monitoring và Logging là bắt buộc:</p>
+                <div class="risk-grid mt-1">
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
+                        <h4>Monitoring (Metrics)</h4>
+                        <p>Phát hiện "Hiện tượng": Request tăng đột biến, tỷ lệ lỗi 401 vọt lên. Giúp phản ứng nhanh (Reactive).</p>
+                    </div>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
+                        <h4>Logging (Events)</h4>
+                        <p>Phát hiện "Chi tiết": Xác định IP kẻ tấn công, Username bị nhắm tới, vị trí địa lý. Cung cấp bằng chứng pháp y.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card mt-1-5 border-pink">
+                <h3>4. Vai trò trong Phản ứng sự cố (Incident Response)</h3>
+                <p>Log giúp trả lời câu hỏi <strong>5W1H</strong>: Who (Ai), What (Cái gì), When (Khi nào), Where (Ở đâu), Why/How (Tại sao/Như thế nào).</p>
+                <div class="section-grid mt-1">
+                    <div>
+                        <p><strong>Phát hiện Sớm (Monitoring):</strong> Ngăn chặn trước khi dữ liệu bị lấy đi, chi phí thấp.</p>
+                    </div>
+                    <div>
+                        <p><strong>Phát hiện Muộn:</strong> Dữ liệu bị rò rỉ, mất uy tín thương hiệu, đối mặt pháp lý.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card mt-1-5">
+                <h3>Giám sát đa lớp trên Cloud</h3>
+                <ul class="risks-solutions">
+                    <li><strong>Hạ tầng:</strong> AWS CloudWatch, Azure Monitor (CPU, RAM).</li>
+                    <li><strong>Mạng:</strong> VPC Flow Logs, Google Cloud Armor (Lưu lượng ra/vào).</li>
+                    <li><strong>Ứng dụng:</strong> AWS X-Ray, New Relic (Lỗi code, thời gian phản hồi API).</li>
+                </ul>
+            </div>
+        </section>
+
         <footer>
-            &copy; 2025 Cloud Computing Group Project - Designed for Lab 1, 2 & 3
+            &copy; 2025 Cloud Computing Group Project - Designed for Lab 1, 2, 3 & 4
         </footer>
     </div>
 
