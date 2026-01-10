@@ -232,60 +232,53 @@
         </section>
 
         <section id="lab5" class="mb-5">
-            <h2 class="shining-text">LAB TUẦN 5 – ỨNG PHÓ SỰ CỐ (INCIDENT RESPONSE)</h2>
+            <h2 class="shining-text">LAB TUẦN 5 – ỨNG PHÓ SỰ CỐ & TỔNG HỢP AN TOÀN ĐÁM MÂY</h2>
             
             <div class="section-grid">
                 <div class="text-side">
-                    <h3>1. Khái niệm & Vai trò</h3>
+                    <h3>1. Incident Response (IR) là gì?</h3>
                     <div class="glass-card">
-                        <p><strong>Incident Response (IR):</strong> Là quy trình có tổ chức nhằm chuẩn bị, phát hiện, kiềm chế và phục hồi sau các sự cố an ninh mạng (rò rỉ dữ liệu, mã độc...).</p>
-                        <p class="mt-1"><strong>Vai trò trên Cloud:</strong> IR đóng vai trò cực kỳ quan trọng do mô hình trách nhiệm chung (Shared Responsibility). Nó giúp xác định dấu vết kẻ tấn công ngay cả khi tài nguyên thay đổi nhanh chóng và xử lý các lỗi cấu hình quyền truy cập (IAM).</p>
+                        <p>Ứng phó sự cố là quy trình có tổ chức nhằm chuẩn bị, phát hiện, kiềm chế và phục hồi sau các sự kiện an ninh mạng. Trong Cloud, IR giúp xác định dấu vết kẻ tấn công thông qua mô hình trách nhiệm chung giữa khách hàng và nhà cung cấp.</p>
                     </div>
                 </div>
                 <div class="text-side">
-                    <h3>2. Dấu hiệu & Phân loại</h3>
+                    <h3>2. Chu trình IR theo NIST</h3>
+                    
+
+[Image of NIST Incident Response Lifecycle]
+
                     <div class="glass-card border-gold">
                         <ul class="risks-solutions">
-                            <li><strong>Dấu hiệu cảnh báo (Precursors):</strong> Quét lỗ hổng từ IP lạ.</li>
-                            <li><strong>Dấu hiệu thực tế (Indicators):</strong> Đăng nhập thất bại hàng loạt, tài khoản hoạt động giờ lạ, CPU/RAM tăng cao bất thường.</li>
-                            <li><strong>Phân loại:</strong> Lộ tài khoản (Account Takeover), Tấn công Brute-force, Khai thác lỗ hổng (SQLi, XSS, Web Shell).</li>
+                            <li><strong>Chuẩn bị:</strong> Xây dựng kế hoạch và công cụ.</li>
+                            <li><strong>Phát hiện & Phân tích:</strong> Xác định các chỉ dấu tấn công (Indicators).</li>
+                            <li><strong>Kiềm chế & Phục hồi:</strong> Cách ly vùng bị tấn công và khôi phục hệ thống.</li>
+                            <li><strong>Sau sự cố:</strong> Rút kinh nghiệm để cải thiện bảo mật.</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="glass-card mt-1-5">
-                <h3>3. Chu trình Incident Response (NIST SP 800-61)</h3>
-                
-
-[Image of NIST incident response lifecycle]
-
+                <h3>3. Tầm quan trọng của Log & Monitoring</h3>
+                <p>Nếu thiếu giám sát và nhật ký, việc ứng phó sự cố sẽ gặp các rào cản lớn:</p>
                 <div class="risk-grid mt-1">
-                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
-                        <h4>Preparation (Chuẩn bị)</h4>
-                        <p>Đào tạo nhân sự, trang bị công cụ (EDR, SIEM), thiết lập quy trình liên lạc.</p>
+                    <div>
+                        <p><strong>Không có Log:</strong> Không thể xác định nguyên nhân gốc rễ, không thể truy vết trách nhiệm và khó xác định phạm vi dữ liệu bị rò rỉ.</p>
                     </div>
-                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
-                        <h4>Detection & Analysis</h4>
-                        <p>Xác định sự cố thật/giả, phân tích mức độ nghiêm trọng và phạm vi ảnh hưởng.</p>
-                    </div>
-                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
-                        <h4>Containment & Recovery</h4>
-                        <p>Cách ly hệ thống bị nhiễm, xóa bỏ mã độc, vá lỗ hổng và khôi phục hoạt động bình thường.</p>
-                    </div>
-                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
-                        <h4>Post-Incident Activity</h4>
-                        <p>Họp rút kinh nghiệm (Lessons Learned) để cải thiện bước chuẩn bị cho tương lai.</p>
+                    <div>
+                        <p><strong>Không có Monitoring:</strong> Sự cố chỉ được phát hiện khi hậu quả đã quá lớn (Downtime, mất dữ liệu), làm tăng chi phí khắc phục.</p>
                     </div>
                 </div>
             </div>
 
             <div class="glass-card mt-1-5 border-pink">
-                <h3>4. Tầm quan trọng của Monitoring & Logging</h3>
-                <p>Nếu không có giám sát và nhật ký, việc phát hiện sự cố là <strong>cực kỳ khó khăn</strong> hoặc chỉ phát hiện khi thiệt hại đã quá lớn (web sập, bị tống tiền).</p>
+                <h3>4. Mối liên hệ tổng hợp</h3>
+                <p>Một chiến lược an toàn đám mây hoàn chỉnh cần sự kết hợp đa lớp:</p>
                 <ul class="risks-solutions mt-1">
-                    <li><strong>Thiếu tầm nhìn:</strong> Không biết ai đã xâm nhập và thực hiện hành vi gì.</li>
-                    <li><strong>Không có bằng chứng:</strong> Không thể truy vết (trace back) nguồn gốc cuộc tấn công.</li>
+                    <li><strong>OWASP:</strong> Giảm thiểu lỗ hổng ứng dụng ngay từ đầu.</li>
+                    <li><strong>Access Control:</strong> Ngăn chặn truy cập trái phép bằng IAM/Zero Trust.</li>
+                    <li><strong>Logging/Monitoring:</strong> Cung cấp tầm nhìn và cảnh báo sớm.</li>
+                    <li><strong>Incident Response:</strong> Sẵn sàng xử lý khi các lớp phòng thủ bị vượt qua.</li>
                 </ul>
             </div>
         </section>
