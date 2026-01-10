@@ -27,8 +27,7 @@
         <div class="container">
             <a href="#" class="nav-brand">CLOUD.LAB</a>
             <div class="nav-links">
-                <a href="#cloud">Cloud Computing</a>
-                <a href="#models">Mô hình</a>
+                <a href="#cloud">Lab 1 & 2</a>
                 <a href="#web-security">Lab 3</a>
                 <a href="#lab4">Lab 4</a>
                 <a href="#lab5">Lab 5</a>
@@ -221,43 +220,34 @@
                     </div>
                 </div>
             </div>
-
-            <div class="glass-card mt-1-5">
-                <h3>Giám sát đa lớp trên Cloud</h3>
-                <ul class="risks-solutions">
-                    <li><strong>Hạ tầng:</strong> AWS CloudWatch, Azure Monitor (CPU, RAM).</li>
-                    <li><strong>Mạng:</strong> VPC Flow Logs, Google Cloud Armor (Lưu lượng ra/vào).</li>
-                    <li><strong>Ứng dụng:</strong> AWS X-Ray, New Relic (Lỗi code, thời gian phản hồi API).</li>
-                </ul>
-            </div>
         </section>
 
         <section id="lab5" class="mb-5">
-            <h2 class="shining-text">LAB TUẦN 5 – PHẢN ỨNG SỰ CỐ (INCIDENT RESPONSE)</h2>
-            
-
-[Image of NIST Incident Response Lifecycle]
-
+            <h2 class="shining-text">LAB TUẦN 5 – ỨNG PHÓ SỰ CỐ (INCIDENT RESPONSE)</h2>
             <div class="section-grid">
                 <div class="text-side">
-                    <h3>Quy trình phản ứng chuẩn NIST</h3>
+                    <h3>Quy trình ứng phó theo chuẩn NIST</h3>
+                    
+
+[Image of NIST incident response lifecycle]
+
                     <div class="glass-card">
-                        <p>Phản ứng sự cố là quy trình có cấu trúc để phát hiện, kiềm chế và phục hồi sau các thảm họa an ninh mạng.</p>
-                        <ul class="mt-1">
-                            <li><strong>Preparation:</strong> Xây dựng đội ngũ và công cụ bảo vệ.</li>
-                            <li><strong>Detection & Analysis:</strong> Phân tích Indicators (dấu hiệu) để xác định cuộc tấn công.</li>
-                            <li><strong>Containment & Recovery:</strong> Cách ly vùng bị nhiễm, xóa mã độc và khôi phục dịch vụ.</li>
-                            <li><strong>Post-Incident Activity:</strong> Tổng kết bài học và cải thiện hệ thống.</li>
+                        <p>Lab 5 tập trung vào khả năng phản ứng của hệ thống khi đối mặt với các cuộc tấn công thực tế thông qua 4 giai đoạn cốt lõi:</p>
+                        <ul>
+                            <li><strong>Chuẩn bị:</strong> Thiết lập chính sách và công cụ giám sát (như Lab 4).</li>
+                            <li><strong>Phát hiện:</strong> Nhận diện dấu hiệu xâm nhập từ các chỉ số bất thường.</li>
+                            <li><strong>Kiềm chế & Phục hồi:</strong> Cách ly vùng bị tấn công và khôi phục dữ liệu sạch.</li>
+                            <li><strong>Hậu sự cố:</strong> Phân tích và rút kinh nghiệm để củng cố hệ thống.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="text-side">
-                    <h3>Mô hình Trách nhiệm Chung</h3>
+                    <h3>Trách nhiệm chia sẻ (Shared Responsibility)</h3>
                     <div class="glass-card border-gold">
-                        <p>Hiểu rõ ranh giới trách nhiệm giữa người dùng và nhà cung cấp (AWS/Cloudflare):</p>
+                        <p>Trong ứng phó sự cố Cloud, trách nhiệm được phân định rõ rệt:</p>
                         <ul class="risks-solutions">
-                            <li><strong>Cloud Provider:</strong> Chịu trách nhiệm bảo mật "vật lý" và hạ tầng nền tảng.</li>
-                            <li><strong>User/Customer:</strong> Chịu trách nhiệm bảo mật dữ liệu, cấu hình IAM và ứng phó sự cố ứng dụng.</li>
+                            <li><strong>Nhà cung cấp:</strong> Đảm bảo hạ tầng vật lý và dịch vụ lõi an toàn.</li>
+                            <li><strong>Người dùng:</strong> Bảo mật mã nguồn, quản lý quyền truy cập và dữ liệu.</li>
                         </ul>
                     </div>
                 </div>
@@ -265,27 +255,30 @@
         </section>
 
         <section id="tong-ket" class="mb-5">
-            <h1 class="shining-text" style="text-align: center; color: #ffcc00; font-size: 2.5rem;">TỔNG KẾT</h1>
-            <div class="glass-card border-pink">
-                <h3>Kết quả đạt được qua chuỗi Lab</h3>
-                <p>Thông qua hành trình 5 tuần, nhóm đã xây dựng được một hệ thống Cloud an toàn đa lớp:</p>
+            <h1 class="shining-text" style="text-align: center; color: #ffcc00; font-size: 2.5rem;">TỔNG KẾT DỰ ÁN</h1>
+            
+            <div class="glass-card border-pink mt-1-5">
+                <h3>Hành trình từ Lab 1 đến Lab 5</h3>
+                <p>Toàn bộ chuỗi bài Lab đã giúp nhóm xây dựng một tư duy an ninh mạng đồng bộ trên môi trường Cloud:</p>
                 <div class="risk-grid mt-1">
                     <div class="glass-card" style="background: rgba(255,255,255,0.03);">
-                        <h4 style="color: #ffcc00;">Tư duy Hệ thống</h4>
-                        <p>Hiểu sâu về IaaS, PaaS và cách vận hành CDN hiệu quả.</p>
+                        <h4 style="color: #ffcc00;">Hạ tầng (Lab 1 & 2)</h4>
+                        <p>Triển khai thực tế trên Cloudflare Pages, tối ưu CDN và bảo vệ IP gốc.</p>
                     </div>
                     <div class="glass-card" style="background: rgba(255,255,255,0.03);">
-                        <h4 style="color: #ffcc00;">Kỹ năng Thực chiến</h4>
-                        <p>Vá lỗi OWASP, triển khai xác thực Zero Trust và cấu hình Monitoring.</p>
+                        <h4 style="color: #ffcc00;">Phòng thủ (Lab 3)</h4>
+                        <p>Hiểu về OWASP Top 10 và thực hành vá các lỗ hổng Injection, XSS.</p>
                     </div>
                     <div class="glass-card" style="background: rgba(255,255,255,0.03);">
-                        <h4 style="color: #ffcc00;">Quản trị Rủi ro</h4>
-                        <p>Làm chủ quy trình Incident Response để đảm bảo tính sẵn sàng cao cho doanh nghiệp.</p>
+                        <h4 style="color: #ffcc00;">Giám sát (Lab 4 & 5)</h4>
+                        <p>Làm chủ hệ thống Logging/Monitoring và quy trình ứng phó sự cố chuyên nghiệp.</p>
                     </div>
                 </div>
             </div>
-            <div class="takeaway-bar" style="margin-top: 1.5rem; text-align: center;">
-                → Bảo mật Cloud không chỉ là công cụ, đó là một quy trình quản trị liên tục.
+
+            <div class="glass-card mt-1-5">
+                <h3 class="text-center">Lời Kết</h3>
+                <p>Dự án này không chỉ là việc áp dụng các công cụ Cloud, mà là việc hiểu rõ các lớp bảo vệ cần thiết để vận hành một hệ thống trực tuyến an toàn, tin cậy và sẵn sàng ứng phó với mọi rủi ro hiện đại.</p>
             </div>
         </section>
 
