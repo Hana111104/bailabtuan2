@@ -32,6 +32,7 @@
                 <a href="#web-security">Lab 3</a>
                 <a href="#lab4">Lab 4</a>
                 <a href="#lab5">Lab 5</a>
+                <a href="#summary" style="color: gold; font-weight: 800;">TỔNG KẾT</a>
             </div>
         </div>
     </nav>
@@ -62,6 +63,7 @@
 
         <section id="models" class="models-container">
             <h2 class="text-center">Mô Hình Dịch Vụ</h2>
+            
             <div class="models-grid">
                 <div class="glass-card model-card iaas">
                     <h3>IaaS</h3>
@@ -96,6 +98,7 @@
         <section id="cdn" class="section-grid">
             <div class="text-side">
                 <h2>Mạng phân phối nội dung (CDN)</h2>
+                
                 <div class="glass-card">
                     <p>CDN phân tán dữ liệu website ra hàng trăm máy chủ trên thế giới. Người dùng ở đâu sẽ truy cập vào máy chủ gần đó nhất.</p>
                     <ul class="mt-1-5">
@@ -153,6 +156,7 @@
 
             <div class="glass-card mt-1-5">
                 <h3>Bảo vệ nâng cao trên Cloud</h3>
+                
                 <div class="risk-grid">
                     <div>
                         <p>Tấn công Cloud có thể dẫn đến "Denial of Wallet" (chi phí tăng vọt do Auto-scaling). Các lớp bảo vệ cần thiết:</p>
@@ -232,59 +236,149 @@
         </section>
 
         <section id="lab5" class="mb-5">
-            <h2 class="shining-text">LAB TUẦN 5 – ỨNG PHÓ SỰ CỐ & TỔNG HỢP AN TOÀN ĐÁM MÂY</h2>
+            <h2 class="shining-text">LAB TUẦN 5 – ỨNG PHÓ SỰ CỐ (INCIDENT RESPONSE)</h2>
             
             <div class="section-grid">
                 <div class="text-side">
-                    <h3>1. Incident Response (IR) là gì?</h3>
+                    <h3>1. Khái niệm & Vai trò</h3>
                     <div class="glass-card">
-                        <p>Ứng phó sự cố là quy trình có tổ chức nhằm chuẩn bị, phát hiện, kiềm chế và phục hồi sau các sự kiện an ninh mạng. Trong Cloud, IR giúp xác định dấu vết kẻ tấn công thông qua mô hình trách nhiệm chung giữa khách hàng và nhà cung cấp.</p>
+                        <p><strong>Incident Response (IR):</strong> Là quy trình có tổ chức nhằm chuẩn bị, phát hiện, kiềm chế và phục hồi sau các sự cố an ninh mạng (rò rỉ dữ liệu, mã độc...).</p>
+                        <p class="mt-1"><strong>Vai trò trên Cloud:</strong> IR đóng vai trò cực kỳ quan trọng do mô hình trách nhiệm chung (Shared Responsibility). Nó giúp xác định dấu vết kẻ tấn công ngay cả khi tài nguyên thay đổi nhanh chóng và xử lý các lỗi cấu hình quyền truy cập (IAM).</p>
                     </div>
                 </div>
                 <div class="text-side">
-                    <h3>2. Chu trình IR theo NIST</h3>
-                    
-
-[Image of NIST Incident Response Lifecycle]
-
+                    <h3>2. Dấu hiệu & Phân loại</h3>
                     <div class="glass-card border-gold">
                         <ul class="risks-solutions">
-                            <li><strong>Chuẩn bị:</strong> Xây dựng kế hoạch và công cụ.</li>
-                            <li><strong>Phát hiện & Phân tích:</strong> Xác định các chỉ dấu tấn công (Indicators).</li>
-                            <li><strong>Kiềm chế & Phục hồi:</strong> Cách ly vùng bị tấn công và khôi phục hệ thống.</li>
-                            <li><strong>Sau sự cố:</strong> Rút kinh nghiệm để cải thiện bảo mật.</li>
+                            <li><strong>Dấu hiệu cảnh báo (Precursors):</strong> Quét lỗ hổng từ IP lạ.</li>
+                            <li><strong>Dấu hiệu thực tế (Indicators):</strong> Đăng nhập thất bại hàng loạt, tài khoản hoạt động giờ lạ, CPU/RAM tăng cao bất thường.</li>
+                            <li><strong>Phân loại:</strong> Lộ tài khoản (Account Takeover), Tấn công Brute-force, Khai thác lỗ hổng (SQLi, XSS, Web Shell).</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="glass-card mt-1-5">
-                <h3>3. Tầm quan trọng của Log & Monitoring</h3>
-                <p>Nếu thiếu giám sát và nhật ký, việc ứng phó sự cố sẽ gặp các rào cản lớn:</p>
+                <h3>3. Chu trình Incident Response (NIST SP 800-61)</h3>
+                
                 <div class="risk-grid mt-1">
-                    <div>
-                        <p><strong>Không có Log:</strong> Không thể xác định nguyên nhân gốc rễ, không thể truy vết trách nhiệm và khó xác định phạm vi dữ liệu bị rò rỉ.</p>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
+                        <h4>Preparation (Chuẩn bị)</h4>
+                        <p>Đào tạo nhân sự, trang bị công cụ (EDR, SIEM), thiết lập quy trình liên lạc.</p>
                     </div>
-                    <div>
-                        <p><strong>Không có Monitoring:</strong> Sự cố chỉ được phát hiện khi hậu quả đã quá lớn (Downtime, mất dữ liệu), làm tăng chi phí khắc phục.</p>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
+                        <h4>Detection & Analysis</h4>
+                        <p>Xác định sự cố thật/giả, phân tích mức độ nghiêm trọng và phạm vi ảnh hưởng.</p>
+                    </div>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
+                        <h4>Containment & Recovery</h4>
+                        <p>Cách ly hệ thống bị nhiễm, xóa bỏ mã độc, vá lỗ hổng và khôi phục hoạt động bình thường.</p>
+                    </div>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
+                        <h4>Post-Incident Activity</h4>
+                        <p>Họp rút kinh nghiệm (Lessons Learned) để cải thiện bước chuẩn bị cho tương lai.</p>
                     </div>
                 </div>
             </div>
 
             <div class="glass-card mt-1-5 border-pink">
-                <h3>4. Mối liên hệ tổng hợp</h3>
-                <p>Một chiến lược an toàn đám mây hoàn chỉnh cần sự kết hợp đa lớp:</p>
+                <h3>4. Tầm quan trọng của Monitoring & Logging</h3>
+                <p>Nếu không có giám sát và nhật ký, việc phát hiện sự cố là <strong>cực kỳ khó khăn</strong> hoặc chỉ phát hiện khi thiệt hại đã quá lớn (web sập, bị tống tiền).</p>
                 <ul class="risks-solutions mt-1">
-                    <li><strong>OWASP:</strong> Giảm thiểu lỗ hổng ứng dụng ngay từ đầu.</li>
-                    <li><strong>Access Control:</strong> Ngăn chặn truy cập trái phép bằng IAM/Zero Trust.</li>
-                    <li><strong>Logging/Monitoring:</strong> Cung cấp tầm nhìn và cảnh báo sớm.</li>
-                    <li><strong>Incident Response:</strong> Sẵn sàng xử lý khi các lớp phòng thủ bị vượt qua.</li>
+                    <li><strong>Thiếu tầm nhìn:</strong> Không biết ai đã xâm nhập và thực hiện hành vi gì.</li>
+                    <li><strong>Không có bằng chứng:</strong> Không thể truy vết (trace back) nguồn gốc cuộc tấn công.</li>
                 </ul>
             </div>
         </section>
 
+        <section id="summary" class="mb-5">
+            <h2 class="shining-text">TỔNG KẾT LỘ TRÌNH & ĐÁNH GIÁ KỸ NĂNG</h2>
+            
+            <div class="glass-card mb-1-5">
+                <h3>1. Lộ trình thực hiện tịnh tiến</h3>
+                <p>Hành trình 5 Lab xây dựng tư duy bảo mật từ hạ tầng đến ứng phó sự cố chuyên sâu:</p>
+                <div class="risk-grid mt-1">
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05); font-size: 0.85em;">
+                        <strong>Lab 1: Xây dựng</strong><br>Hạ tầng Cloud & CDN (PaaS).
+                    </div>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05); font-size: 0.85em;">
+                        <strong>Lab 2: Kiểm soát</strong><br>Zero Trust & Cloudflare Access.
+                    </div>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05); font-size: 0.85em;">
+                        <strong>Lab 3: Phòng ngự</strong><br>Fix lỗi OWASP Top 10.
+                    </div>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05); font-size: 0.85em;">
+                        <strong>Lab 4: Giám sát</strong><br>Monitoring & Logging.
+                    </div>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05); font-size: 0.85em;">
+                        <strong>Lab 5: Tổng kết</strong><br>IR theo chuẩn NIST.
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card border-gold mb-1-5">
+                <h3>2. Đánh giá kỹ năng & Kết quả định lượng</h3>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 10px; color: #fff; font-size: 0.9em;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid gold;">
+                                <th style="text-align: left; padding: 12px;">Nội dung</th>
+                                <th style="text-align: left; padding: 12px;">Kỹ năng triển khai</th>
+                                <th style="text-align: left; padding: 12px;">Kết quả</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px;">Hạ tầng</td>
+                                <td style="padding: 12px;">Website tĩnh qua GitHub/Cloudflare Pages.</td>
+                                <td style="padding: 12px; color: #00ff00;">SecurityHeaders: Loại A</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px;">Truy cập</td>
+                                <td style="padding: 12px;">IAM & Cloudflare Access (Google Auth).</td>
+                                <td style="padding: 12px; color: #00ff00;">Chặn 100% khách lạ</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px;">An toàn App</td>
+                                <td style="padding: 12px;">Fix lỗi Injection, Broken Access Control.</td>
+                                <td style="padding: 12px; color: #00ff00;">Trạng thái: FIXED</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px;">Ứng phó</td>
+                                <td style="padding: 12px;">Xây dựng kịch bản xử lý theo chuẩn NIST.</td>
+                                <td style="padding: 12px; color: #00ff00;">Giảm MTTD tối đa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-grid">
+                <div class="text-side">
+                    <h3>3. Mô hình Bảo mật áp dụng</h3>
+                    
+
+[Image of zero trust security model diagram]
+
+                    <div class="glass-card">
+                        <ul class="risks-solutions">
+                            <li><strong>Zero Trust:</strong> Loại bỏ "mạng nội bộ tin cậy", xác thực mọi yêu cầu.</li>
+                            <li><strong>Defense in Depth:</strong> Bảo vệ đa lớp (CDN -> IAM -> App Sec -> Logging).</li>
+                            <li><strong>Shared Responsibility:</strong> Phân định trách nhiệm giữa Cloud Provider và Người dùng.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-side">
+                    <h3>4. Kết luận chung</h3>
+                    <div class="glass-card border-pink" style="height: 100%;">
+                        <p>Chuỗi 5 bài Lab đã giúp sinh viên chuyển đổi từ tư duy triển khai đơn thuần sang <strong>tư duy bảo mật chủ động</strong>. Sự liên kết xuyên suốt giúp chúng em hiểu rõ cách vận hành một hệ thống an toàn, thực tiễn và sẵn sàng ứng phó với các mối đe dọa hiện đại trên môi trường Cloud.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer>
-            &copy; 2025 Cloud Computing Group Project - Designed for Lab 1, 2, 3, 4 & 5
+            &copy; 2025 Cloud Computing Group Project - Designed for Lab 1-5 | Full Security Lifecycle
         </footer>
     </div>
 
