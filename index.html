@@ -233,31 +233,31 @@
         </section>
 
         <section id="lab5" class="mb-5">
-            <h2 class="shining-text">LAB TUẦN 5 – ỨNG PHÓ SỰ CỐ (INCIDENT RESPONSE)</h2>
+            <h2 class="shining-text">LAB TUẦN 5 – PHẢN ỨNG SỰ CỐ (INCIDENT RESPONSE)</h2>
             
 
 [Image of NIST Incident Response Lifecycle]
 
             <div class="section-grid">
                 <div class="text-side">
-                    <h3>1. Quy trình ứng phó theo chuẩn NIST</h3>
+                    <h3>Quy trình phản ứng chuẩn NIST</h3>
                     <div class="glass-card">
-                        <p>Ứng phó sự cố là khả năng của tổ chức trong việc phát hiện, hạn chế và phục hồi sau các cuộc tấn công mạng.</p>
+                        <p>Phản ứng sự cố là quy trình có cấu trúc để phát hiện, kiềm chế và phục hồi sau các thảm họa an ninh mạng.</p>
                         <ul class="mt-1">
-                            <li><strong>Chuẩn bị:</strong> Xây dựng chính sách, công cụ giám sát.</li>
-                            <li><strong>Phát hiện & Phân tích:</strong> Nhận diện các chỉ dấu (Indicators) như Brute-force, Web Shell.</li>
-                            <li><strong>Kiềm chế & Phục hồi:</strong> Cách ly vùng bị nhiễm và khôi phục dịch vụ.</li>
-                            <li><strong>Sau sự cố:</strong> Rút ra bài học kinh nghiệm để gia cố hệ thống.</li>
+                            <li><strong>Preparation:</strong> Xây dựng đội ngũ và công cụ bảo vệ.</li>
+                            <li><strong>Detection & Analysis:</strong> Phân tích Indicators (dấu hiệu) để xác định cuộc tấn công.</li>
+                            <li><strong>Containment & Recovery:</strong> Cách ly vùng bị nhiễm, xóa mã độc và khôi phục dịch vụ.</li>
+                            <li><strong>Post-Incident Activity:</strong> Tổng kết bài học và cải thiện hệ thống.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="text-side">
-                    <h3>2. Phân tích trách nhiệm</h3>
+                    <h3>Mô hình Trách nhiệm Chung</h3>
                     <div class="glass-card border-gold">
-                        <p>Theo mô hình <strong>Shared Responsibility</strong>:</p>
+                        <p>Hiểu rõ ranh giới trách nhiệm giữa người dùng và nhà cung cấp (AWS/Cloudflare):</p>
                         <ul class="risks-solutions">
-                            <li><strong>Nhà cung cấp Cloud:</strong> Đảm bảo an toàn vật lý, hạ tầng mạng lõi.</li>
-                            <li><strong>Khách hàng:</strong> Bảo mật dữ liệu, quản lý quyền truy cập (IAM), và ứng phó sự cố cấp ứng dụng.</li>
+                            <li><strong>Cloud Provider:</strong> Chịu trách nhiệm bảo mật "vật lý" và hạ tầng nền tảng.</li>
+                            <li><strong>User/Customer:</strong> Chịu trách nhiệm bảo mật dữ liệu, cấu hình IAM và ứng phó sự cố ứng dụng.</li>
                         </ul>
                     </div>
                 </div>
@@ -265,34 +265,32 @@
         </section>
 
         <section id="tong-ket" class="mb-5">
-            <h1 class="shining-text" style="text-align: center; color: #ffcc00;">TỔNG KẾT HỌC PHẦN</h1>
-            <div class="glass-card border-pink mt-1-5">
-                <h3>Hành trình từ Lab 1 đến Lab 5</h3>
-                <p>Thông qua chuỗi bài thực hành, nhóm đã xây dựng được một tư duy bảo mật toàn diện cho hệ thống Điện toán đám mây:</p>
+            <h1 class="shining-text" style="text-align: center; color: #ffcc00; font-size: 2.5rem;">TỔNG KẾT</h1>
+            <div class="glass-card border-pink">
+                <h3>Kết quả đạt được qua chuỗi Lab</h3>
+                <p>Thông qua hành trình 5 tuần, nhóm đã xây dựng được một hệ thống Cloud an toàn đa lớp:</p>
                 <div class="risk-grid mt-1">
                     <div class="glass-card" style="background: rgba(255,255,255,0.03);">
-                        <h4 style="color: #ffcc00;">Hạ tầng & Triển khai</h4>
-                        <p>Nắm vững IaaS/PaaS/SaaS và triển khai website tĩnh an toàn qua CDN Cloudflare.</p>
+                        <h4 style="color: #ffcc00;">Tư duy Hệ thống</h4>
+                        <p>Hiểu sâu về IaaS, PaaS và cách vận hành CDN hiệu quả.</p>
                     </div>
                     <div class="glass-card" style="background: rgba(255,255,255,0.03);">
-                        <h4 style="color: #ffcc00;">Kiểm soát & Phòng thủ</h4>
-                        <p>Áp dụng Zero Trust, vá lỗi OWASP Top 10 và cấu hình Security Headers đạt Grade A.</p>
+                        <h4 style="color: #ffcc00;">Kỹ năng Thực chiến</h4>
+                        <p>Vá lỗi OWASP, triển khai xác thực Zero Trust và cấu hình Monitoring.</p>
                     </div>
                     <div class="glass-card" style="background: rgba(255,255,255,0.03);">
-                        <h4 style="color: #ffcc00;">Giám sát & Phản ứng</h4>
-                        <p>Xây dựng hệ thống Monitoring/Logging để chủ động phát hiện và xử lý sự cố theo NIST.</p>
+                        <h4 style="color: #ffcc00;">Quản trị Rủi ro</h4>
+                        <p>Làm chủ quy trình Incident Response để đảm bảo tính sẵn sàng cao cho doanh nghiệp.</p>
                     </div>
                 </div>
             </div>
-
-            <div class="glass-card mt-1-5">
-                <h3>Kết luận cuối cùng</h3>
-                <p>Bảo mật trên Cloud không phải là một trạng thái tĩnh mà là một quy trình liên tục. Sự kết hợp giữa hạ tầng hiện đại của nhà cung cấp và sự chủ động quản lý của người vận hành là chìa khóa để bảo vệ tài sản số trước các thách thức an ninh mạng ngày càng phức tạp.</p>
+            <div class="takeaway-bar" style="margin-top: 1.5rem; text-align: center;">
+                → Bảo mật Cloud không chỉ là công cụ, đó là một quy trình quản trị liên tục.
             </div>
         </section>
 
         <footer>
-            &copy; 2025 Cloud Computing Group Project - Hoàn tất Lab 1, 2, 3, 4 & 5
+            &copy; 2025 Cloud Computing Group Project - Hoàn thành Lab 1, 2, 3, 4 & 5
         </footer>
     </div>
 
