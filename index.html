@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Computing Portfolio - Group Project</title>
+    <meta name="description" content="Hồ sơ năng lực về Cloud Computing, bảo mật Web và quy trình ứng phó sự cố an toàn thông tin.">
+    <meta name="author" content="Nguyễn Tuấn Anh, Nguyễn Kim Hân, Võ Hoàng Tấn Phát">
+    
+    <title>Cloud Security Portfolio - Group Project</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Bổ sung một số style cho bảng và layout tổng kết */
-        .summary-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: rgba(255,255,255,0.05); }
-        .summary-table th, .summary-table td { border: 1px solid rgba(255,255,255,0.2); padding: 12px; text-align: left; }
-        .summary-table th { background: rgba(255, 204, 0, 0.2); color: #ffcc00; }
-        .highlight-gold { color: #ffcc00; font-weight: bold; }
-        .status-pass { color: #00ff00; font-weight: bold; }
+        /* Bổ sung style cho mục Tổng kết và bảng biểu */
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .result-table { width: 100%; border-collapse: collapse; margin-top: 15px; background: rgba(255, 255, 255, 0.05); border-radius: 8px; overflow: hidden; }
+        .result-table th, .result-table td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .result-table th { background: rgba(255, 204, 0, 0.2); color: #ffcc00; }
+        .status-badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+        .status-success { background: #00ff00; color: #000; }
+        .nav-summary { color: #ffcc00 !important; font-weight: 800; border: 1px solid #ffcc00; padding: 5px 15px; border-radius: 20px; }
     </style>
 </head>
 <body>
@@ -21,110 +27,115 @@
         <div class="container">
             <a href="#" class="nav-brand">CLOUD.LAB</a>
             <div class="nav-links">
-                <a href="#lab1">Lab 1</a>
-                <a href="#lab2">Lab 2</a>
-                <a href="#lab3">Lab 3</a>
+                <a href="#cloud">Lab 1-2</a>
+                <a href="#web-security">Lab 3</a>
                 <a href="#lab4">Lab 4</a>
                 <a href="#lab5">Lab 5</a>
-                <a href="#tong-ket" class="highlight-gold">TỔNG KẾT</a>
+                <a href="#summary" class="nav-summary">TỔNG KẾT</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
+        <header>
+            <h1 class="shining-text">Cloud Computing & Security</h1>
+            <p class="header-subtitle">Hành trình xây dựng và bảo vệ hạ tầng số</p>
+        </header>
+
+        <div class="team-container">
+            <div class="member-badge"><span class="member-name">Nguyễn Tuấn Anh</span> 22004335</div>
+            <div class="member-badge"><span class="member-name">Nguyễn Kim Hân</span> 22004153</div>
+            <div class="member-badge"><span class="member-name">Võ Hoàng Tấn Phát</span> 22004290</div>
+        </div>
+
         <section id="lab5" class="mb-5">
-            <h2 class="shining-text">LAB 5: ỨNG PHÓ SỰ CỐ (INCIDENT RESPONSE)</h2>
-            <div class="glass-card">
-                <p>Nội dung Lab 5 tập trung vào quy trình xử lý khi hệ thống bị tấn công, dựa trên khung tiêu chuẩn của NIST.</p>
-                
-
-[Image of NIST Incident Response Lifecycle]
-
-                <ul class="mt-1">
-                    <li><strong>Chuẩn bị:</strong> Thiết lập chính sách và công cụ giám sát.</li>
-                    <li><strong>Phát hiện & Phân tích:</strong> Xác định dấu hiệu bất thường từ Log.</li>
-                    <li><strong>Kiềm chế & Phục hồi:</strong> Cách ly máy chủ bị nhiễm, khôi phục dữ liệu.</li>
-                    <li><strong>Hậu sự cố:</strong> Rút ra bài học kinh nghiệm.</li>
-                </ul>
+            <h2 class="shining-text">LAB 5 – ỨNG PHÓ SỰ CỐ (INCIDENT RESPONSE)</h2>
+            <div class="section-grid">
+                <div class="text-side">
+                    <h3>Quy trình chuẩn NIST</h3>
+                    <div class="glass-card">
+                        <p>Ứng phó sự cố không chỉ là kỹ thuật, mà là một quy trình có tính chu kỳ nhằm giảm thiểu thiệt hại và khôi phục dịch vụ nhanh nhất.</p>
+                        
+                    </div>
+                </div>
+                <div class="text-side">
+                    <h3>Các yếu tố then chốt</h3>
+                    <div class="glass-card border-gold">
+                        <ul>
+                            <li><strong>Chỉ dấu (Indicators):</strong> Các dấu hiệu cho thấy sự cố đang xảy ra (ví dụ: Log ghi lại hàng ngàn request 403 từ một IP).</li>
+                            <li><strong>Trách nhiệm:</strong> Cloud Provider bảo vệ hạ tầng, người dùng bảo vệ dữ liệu và ứng dụng (Shared Responsibility).</li>
+                            <li><strong>Hậu sự cố:</strong> Phân tích "Lesson Learned" để cập nhật chính sách bảo mật cho tương lai.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="tong-ket" class="mb-5">
-            <h1 class="shining-text" style="text-align: center; font-size: 2.5rem; color: #ffcc00;">TỔNG KẾT TOÀN DIỆN</h1>
+        <section id="summary" class="mb-5">
+            <h1 class="shining-text" style="color: #ffcc00; text-align: center;">TỔNG KẾT DỰ ÁN</h1>
             
-            <div class="glass-card border-gold">
-                <h3>1. Sự liên kết giữa các bài Lab</h3>
-                <p>Hành trình từ Lab 1 đến Lab 5 không chỉ là các bài thực hành rời rạc mà là một quy trình xây dựng hạ tầng Cloud an toàn:</p>
-                <ul>
-                    <li><strong>Hạ tầng (Lab 1 & 2):</strong> Triển khai website trên PaaS và bảo vệ bằng mô hình Zero Trust.</li>
-                    <li><strong>Phòng thủ (Lab 3):</strong> Trực tiếp vá các lỗ hổng phần mềm (OWASP).</li>
-                    <li><strong>Giám sát (Lab 4):</strong> Xây dựng hệ thống "mắt thần" để quan sát mọi hành vi xâm nhập.</li>
-                    <li><strong>Phản ứng (Lab 5):</strong> Hoàn thiện quy trình xử lý khi các lớp phòng thủ bị xuyên thủng.</li>
-                </ul>
+            <div class="glass-card border-pink">
+                <h3>1. Tổng quan lộ trình kỹ năng</h3>
+                <p>Thông qua chuỗi 5 Lab, nhóm đã xây dựng được tư duy bảo mật đa lớp (Defense in Depth) trên môi trường Cloud:</p>
+                <div class="summary-grid">
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
+                        <h4 style="color: #00d4ff;">Hạ tầng & Truy cập</h4>
+                        <p>Triển khai PaaS trên Cloudflare Pages, thiết lập <strong>Zero Trust</strong> và IAM để bảo vệ vùng quản trị.</p>
+                    </div>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
+                        <h4 style="color: #00d4ff;">Vá lỗi & Giám sát</h4>
+                        <p>Khắc phục lỗ hổng <strong>OWASP</strong> (SQLi, XSS) và thiết lập hệ thống Logging/Monitoring để xóa bỏ điểm mù.</p>
+                    </div>
+                    <div class="glass-card" style="background: rgba(255,255,255,0.05);">
+                        <h4 style="color: #00d4ff;">Phản ứng hệ thống</h4>
+                        <p>Áp dụng quy trình <strong>NIST</strong> để sẵn sàng ứng phó với các tình huống tấn công thực tế.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="glass-card mt-1-5">
-                <h3>2. Bảng đánh giá kết quả kỹ thuật</h3>
-                <table class="summary-table">
+                <h3>2. Kết quả đạt được</h3>
+                <table class="result-table">
                     <thead>
                         <tr>
-                            <th>Kỹ năng / Công cụ</th>
-                            <th>Mô tả triển khai</th>
-                            <th>Kết quả</th>
+                            <th>Mục tiêu</th>
+                            <th>Công cụ triển khai</th>
+                            <th>Trạng thái</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Cloudflare Pages</td>
-                            <td>Triển khai PaaS & CDN cho Website tĩnh</td>
-                            <td class="status-pass">Hoàn thành</td>
+                            <td>Triển khai Website tĩnh (PaaS)</td>
+                            <td>GitHub + Cloudflare Pages</td>
+                            <td><span class="status-badge status-success">Thành công</span></td>
                         </tr>
                         <tr>
-                            <td>Zero Trust / IAM</td>
-                            <td>Xác thực GitHub Auth qua Cloudflare Access</td>
-                            <td class="status-pass">Đạt Grade A</td>
+                            <td>Security Headers (Bảo mật lớp mạng)</td>
+                            <td>CSP, HSTS, X-Frame-Options</td>
+                            <td><span class="status-badge status-success">Grade A</span></td>
                         </tr>
                         <tr>
-                            <td>Vá lỗi OWASP</td>
-                            <td>Sửa lỗi SQL Injection bằng Parameterized Queries</td>
-                            <td class="status-pass">Thành công</td>
+                            <td>Kiểm soát truy cập (Access Control)</td>
+                            <td>Cloudflare Access + GitHub Auth</td>
+                            <td><span class="status-badge status-success">Đã kích hoạt</span></td>
                         </tr>
                         <tr>
-                            <td>Monitoring & Log</td>
-                            <td>Phân tích Dashboard và truy vết sự cố qua nhật ký</td>
-                            <td class="status-pass">Hoàn thành</td>
+                            <td>Giám sát & Phản ứng</td>
+                            <td>Logging & NIST Framework</td>
+                            <td><span class="status-badge status-success">Hoàn thiện</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div class="glass-card mt-1-5 border-pink">
+            <div class="glass-card mt-1-5 border-gold">
                 <h3>3. Bài học kinh nghiệm</h3>
-                <p>Qua chuỗi bài Lab, nhóm đã rút ra được 3 nguyên tắc cốt lõi trong an toàn điện toán đám mây:</p>
-                <div class="risk-grid">
-                    <div class="glass-card" style="background: rgba(255,255,255,0.03);">
-                        <h4 class="highlight-gold">Defense in Depth</h4>
-                        <p>Không có một công cụ nào là an toàn tuyệt đối. Cần kết hợp nhiều lớp bảo vệ (WAF, IAM, Encryption).</p>
-                    </div>
-                    <div class="glass-card" style="background: rgba(255,255,255,0.03);">
-                        <h4 class="highlight-gold">Shared Responsibility</h4>
-                        <p>Hiểu rõ phần nào nhà cung cấp Cloud lo (Vật lý), phần nào mình phải tự bảo vệ (Dữ liệu, Code).</p>
-                    </div>
-                    <div class="glass-card" style="background: rgba(255,255,255,0.03);">
-                        <h4 class="highlight-gold">Visibility is Key</h4>
-                        <p>Nếu không thể nhìn thấy (Logging), bạn không thể bảo vệ. Giám sát là nền tảng của mọi phản ứng.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-card mt-1-5" style="text-align: center;">
-                <h3 class="shining-text">KẾT LUẬN</h3>
-                <p>Dự án đã giúp nhóm nắm vững từ lý thuyết đến thực hành các giải pháp bảo mật Cloud hiện đại, sẵn sàng cho việc triển khai các ứng dụng thực tế một cách chuyên nghiệp và an toàn.</p>
+                <p>Điện toán đám mây mang lại sự linh hoạt, nhưng an ninh là một quá trình liên tục. Nhóm nhận thấy rằng việc kết hợp giữa <strong>phòng thủ chủ động</strong> (vá lỗi code) và <strong>giám sát bị động</strong> (phân tích log) là cách duy nhất để duy trì một hệ thống bền bỉ trước các mối đe dọa hiện đại.</p>
             </div>
         </section>
 
         <footer>
-            &copy; 2025 Cloud Computing Group Project - Thành viên: Tuấn Anh, Kim Hân, Tấn Phát
+            &copy; 2025 Cloud Computing Group Project - Hoàn thành Lab 1, 2, 3, 4 & 5
         </footer>
     </div>
 
